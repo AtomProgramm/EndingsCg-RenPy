@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 1671: u'if' is not a keyword argument or valid child for the textbutton statement.
+    textbutton _("<") action if cgPageNow != 1 :
+                               ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Wed Dec  8 22:30:07 2021
