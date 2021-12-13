@@ -1548,65 +1548,6 @@ screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0
 
     # style_prefix "game_menu"
 
-    # if main_menu:
-    #     add gui.main_menu_background
-    # else:
-    #     add gui.game_menu_background
-
-    # frame:
-    #     style "game_menu_outer_frame"
-
-    #     hbox:
-
-    #         ## Резервирует пространство для навигации.
-    #         frame:
-    #             style "game_menu_navigation_frame"
-
-    #         frame:
-    #             style "game_menu_content_frame"
-
-    #             if scroll == "viewport":
-
-    #                 viewport:
-    #                     yinitial yinitial
-    #                     scrollbars "vertical"
-    #                     mousewheel True
-    #                     draggable True
-    #                     pagekeys True
-
-    #                     side_yfill True
-
-    #                     vbox:
-    #                         transclude
-
-    #             elif scroll == "vpgrid":
-
-    #                 vpgrid:
-    #                     cols 1
-    #                     yinitial yinitial
-
-    #                     scrollbars "vertical"
-    #                     mousewheel True
-    #                     draggable True
-    #                     pagekeys True
-
-    #                     side_yfill True
-
-    #                     transclude
-    #             else:
-
-    #                 transclude
-    # use navigation
-
-    # textbutton _("Вернуться"):
-    #     style "return_button"
-
-    #     action Return()
-
-    # label title
-
-    # if main_menu:
-    #     key "game_menu" action ShowMenu("main_menu")
     use game_menu(title):
             default cgPageNow = 0
 
@@ -1630,7 +1571,7 @@ screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0
                     #     value page_name_value
 
                 ## Таблица слотов.
-                grid gui.file_slot_cols gui.file_slot_rows:
+                grid gui.gallary_slot_rows  gui.gallary_slot_rows:
                     style_prefix "slot"
 
                     xalign 0.5
@@ -1638,24 +1579,21 @@ screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0
 
                     spacing gui.slot_spacing
 
-                    for i in range(gui.file_slot_cols * gui.file_slot_rows):
+                    for i in range(gui.gallary_slot_cols * gui.gallary_slot_rows):
 
                         $ slot = i + 1
 
                         button:
-                            action FileAction(slot)
+                            # action FileAction(slot)
 
                             has vbox
 
-                            # $ defualtName
-                            # python:
-
-                            if persistent.endingsDict[i+cgPageNow][2]:
-                                add persistent.endingsDict[i+cgPageNow][0] xalign 0.5 zoom .2#FileScreenshot(slot) xalign 0.5
-
-                                text persistent.endingsDict[i+cgPageNow][1]
-                            else:
-                                text "".join(["?" for x in persistent.endingsDict[i+cgPageNow][1]])
+                            if  len(persistent.endingsDict) > (i+(gui.gallary_slot_cols * gui.gallary_slot_rows * cgPageNow)):
+                                if persistent.endingsDict[i+(gui.gallary_slot_cols * gui.gallary_slot_rows * cgPageNow)][2]:
+                                    add persistent.endingsDict[i+(gui.gallary_slot_cols * gui.gallary_slot_rows * cgPageNow)][0] xalign 0.5 zoom .2
+                                    text persistent.endingsDict[i+(gui.gallary_slot_cols * gui.gallary_slot_rows * cgPageNow)][1]
+                                else:
+                                    text "".join(["?" for x in persistent.endingsDict[i+(gui.gallary_slot_cols * gui.gallary_slot_rows * cgPageNow)][1]])
 
                            # key "save_delete" action FileDelete(slot)
 
@@ -1670,11 +1608,11 @@ screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0
 
                     textbutton _("<") action SetLocalVariable("cgPageNow", max(0,cgPageNow - 1))
 
-                    ## range(1, 10) задаёт диапазон значений от 1 до 9.
-                    for page in range(1, 10):
+                    for page in range(1,int(round(len(persistent.endingsDict)/ (gui.gallary_slot_cols * gui.gallary_slot_rows) ))+2):
+                    # for page in range(1,2):
                         textbutton "[page]" action SetLocalVariable("cgPageNow", page - 1)
 
-                    textbutton _(">") action SetLocalVariable("cgPageNow",min(10, cgPageNow + 1))
+                    textbutton _(">") action SetLocalVariable("cgPageNow",min(int(round(len(persistent.endingsDict)/ (gui.gallary_slot_cols * gui.gallary_slot_rows) )), cgPageNow + 1))
 
 style game_menu_outer_frame is empty
 style game_menu_navigation_frame is empty

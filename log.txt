@@ -1,49 +1,15 @@
-Wed Dec  8 20:50:22 2021
+Mon Dec 13 03:50:57 2021
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
 
 Bootstrap to the start of init.init took 0.12s
 Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.09s
-Loading script took 3.84s
+Loader init took 0.06s
+Loading error handling took 0.13s
+Loading script took 5.86s
 Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
 Set script version to: None (alternate path)
-Running init code took 0.83s
-Loading analysis data took 0.04s
-Analyze and compile ATL took 0.01s
-Index archives took 0.00s
-Dump and make backups. took 0.00s
-Cleaning cache took 0.00s
-Making clean stores took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: "Couldn't load nvlib." (can be ignored)
-Creating interface object took 0.03s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1280, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: 'ATI Technologies Inc.'
-Renderer: 'AMD Radeon (TM) R9 200 Series'
-Version: '4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6'
-Display Info: None
-Screen sizes: virtual=(800, 600) physical=(888, 666) drawable=(888, 666)
-Maximum texture size: 4096x4096
+ - Init at launcher/game/web.rpyc:26 took 0.27107 s.
