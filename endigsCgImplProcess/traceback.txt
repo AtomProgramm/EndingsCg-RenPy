@@ -5,7 +5,7 @@ While running game code:
     screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0.0):
   File "game/screens.rpy", line 1545, in execute
     screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0.0):
-  File "game/screens.rpy", line 1610, in execute
+  File "game/screens.rpy", line 1551, in execute
     use game_menu(title):
   File "game/screens.rpy", line 437, in execute
     screen game_menu(title, scroll=None, yinitial=0.0):
@@ -21,22 +21,22 @@ While running game code:
     if scroll == "viewport":
   File "game/screens.rpy", line 489, in execute
     transclude
-  File "game/screens.rpy", line 1610, in execute
+  File "game/screens.rpy", line 1551, in execute
     use game_menu(title):
-  File "game/screens.rpy", line 1613, in execute
+  File "game/screens.rpy", line 1554, in execute
     fixed:
-  File "game/screens.rpy", line 1633, in execute
-    grid gui.file_slot_cols gui.file_slot_rows:
-  File "game/screens.rpy", line 1641, in execute
-    for i in range(gui.file_slot_cols * gui.file_slot_rows):
-  File "game/screens.rpy", line 1645, in execute
+  File "game/screens.rpy", line 1574, in execute
+    grid gui.gallary_slot_rows  gui.gallary_slot_rows:
+  File "game/screens.rpy", line 1582, in execute
+    for i in range(gui.gallary_slot_rows * gui.gallary_slot_rows):
+  File "game/screens.rpy", line 1586, in execute
     button:
-  File "game/screens.rpy", line 1648, in execute
+  File "game/screens.rpy", line 1589, in execute
     has vbox
-  File "game/screens.rpy", line 1653, in execute
-    if persistent.endingsDict[i+cgPageNow][2]:
-  File "game/screens.rpy", line 1653, in <module>
-    if persistent.endingsDict[i+cgPageNow][2]:
+  File "game/screens.rpy", line 1591, in execute
+    if persistent.endingsDict[i+(gui.gallary_slot_rows * gui.gallary_slot_rows * cgPageNow)][2]:
+  File "game/screens.rpy", line 1591, in <module>
+    if persistent.endingsDict[i+(gui.gallary_slot_rows * gui.gallary_slot_rows * cgPageNow)][2]:
 IndexError: list index out of range
 
 -- Full Traceback ------------------------------------------------------------
@@ -78,7 +78,7 @@ Full traceback:
     screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0.0):
   File "game/screens.rpy", line 1545, in execute
     screen endings_achivment_meenu(title="Концовки", scroll=None, yinitial=0.0):
-  File "game/screens.rpy", line 1610, in execute
+  File "game/screens.rpy", line 1551, in execute
     use game_menu(title):
   File "game/screens.rpy", line 437, in execute
     screen game_menu(title, scroll=None, yinitial=0.0):
@@ -94,22 +94,22 @@ Full traceback:
     if scroll == "viewport":
   File "game/screens.rpy", line 489, in execute
     transclude
-  File "game/screens.rpy", line 1610, in execute
+  File "game/screens.rpy", line 1551, in execute
     use game_menu(title):
-  File "game/screens.rpy", line 1613, in execute
+  File "game/screens.rpy", line 1554, in execute
     fixed:
-  File "game/screens.rpy", line 1633, in execute
-    grid gui.file_slot_cols gui.file_slot_rows:
-  File "game/screens.rpy", line 1641, in execute
-    for i in range(gui.file_slot_cols * gui.file_slot_rows):
-  File "game/screens.rpy", line 1645, in execute
+  File "game/screens.rpy", line 1574, in execute
+    grid gui.gallary_slot_rows  gui.gallary_slot_rows:
+  File "game/screens.rpy", line 1582, in execute
+    for i in range(gui.gallary_slot_rows * gui.gallary_slot_rows):
+  File "game/screens.rpy", line 1586, in execute
     button:
-  File "game/screens.rpy", line 1648, in execute
+  File "game/screens.rpy", line 1589, in execute
     has vbox
-  File "game/screens.rpy", line 1653, in execute
-    if persistent.endingsDict[i+cgPageNow][2]:
-  File "game/screens.rpy", line 1653, in <module>
-    if persistent.endingsDict[i+cgPageNow][2]:
+  File "game/screens.rpy", line 1591, in execute
+    if persistent.endingsDict[i+(gui.gallary_slot_rows * gui.gallary_slot_rows * cgPageNow)][2]:
+  File "game/screens.rpy", line 1591, in <module>
+    if persistent.endingsDict[i+(gui.gallary_slot_rows * gui.gallary_slot_rows * cgPageNow)][2]:
   File "renpy/python.py", line 992, in __getitem__
     rv = list.__getitem__(self, index)
 IndexError: list index out of range
@@ -117,4 +117,4 @@ IndexError: list index out of range
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 q 1.0
-Wed Dec  8 22:31:18 2021
+Mon Dec 13 04:11:41 2021
