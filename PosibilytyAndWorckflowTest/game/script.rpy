@@ -1,15 +1,4 @@
-﻿# default persistent.endingsCgOpen = False
-# default persistent.endingsDict = [("0","gnou",False),
-#                                   ("1","gla",False),
-#                                   ("2","pa1",False),
-#                                   ("3","pa2",False),
-#                                   ("4","gh",False),
-#                                   ("5","sol",False),
-#                                   ("6","mir",False),
-#                                   ("7","fac",False),
-#                                   ("8","fi",False),
-#                                   ("9","buc",False)]
-# Вы можете расположить сценарий своей игры в этом файле.
+﻿# Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
 define e = Character('Эйлин', color="#0007FF")
@@ -48,9 +37,11 @@ label w1:
     return
 
 label w2:
-    $ persistent.endingsCgOpen = True
-    $ persistent.endingsDict[5] = (persistent.endingsDict[5][0],persistent.endingsDict[5][1],True)
 
     ee "...Мдааааа..."
     
     return
+
+# $ persistent.endingsCgOpen = True
+# $ persistent.endingsDict[5] = (persistent.endingsDict[5][0],persistent.endingsDict[5][1],True)
+
