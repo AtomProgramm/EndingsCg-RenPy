@@ -1,0 +1,22 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 67: expected statement.
+    renpy.save_persistent()
+                           ^
+
+File "game/script.rpy", line 107: expected statement.
+    renpy.save_persistent()
+                           ^
+
+File "game/script.rpy", line 129: expected statement.
+    renpy.save_persistent()
+                           ^
+
+File "game/script.rpy", line 130: expected 'image_name_component' not found.
+    show "images/endigTueEnding.jpg" with Fade(0.1, 0.0, 0.5, color="#fff")
+         ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Sun Jan  9 19:21:58 2022

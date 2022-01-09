@@ -1,14 +1,7 @@
 default persistent.endingsCgOpen = False
-default persistent.endingsDict = [("0","gnou",True),
-                                  ("1","gla",True),
-                                  ("2","pa1",True),
-                                  ("3","pa2",True),
-                                  ("4","gh",True),
-                                  ("5","sol",False),
-                                  ("6","mir",False),
-                                  ("7","fac",False),
-                                  ("8","fi",False),
-                                  ("9","buc",False)]
+default persistent.endingsDict = [("endigTerapevt.jpg","Fast ending",False),
+                                  ("endigPsycho.jpg","Psycho ending",False),
+                                  ("endigTueEnding.jpg","True ending",False)]
 
 ################################################################################
 ## Инициализация
