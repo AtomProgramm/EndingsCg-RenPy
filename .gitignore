@@ -1,0 +1,115 @@
+# macOS-related files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows-related files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+
+# Python related files.
+*.pyc
+*.pyo
+*.pyi
+
+# Editor files.
+*~
+*.bak
+
+# Compiled Ren'Py files.
+*.rpyc
+*.rpyb
+*.rpymc
+
+# Ren'Py log files.
+log.txt
+errors.txt
+traceback.txt
+lint.txt
+
+# Created directories.
+saves/
+tmp/
+cache/
+
+
+/renpy/renpy.sh
+/renpy/renpy2.sh
+/renpy/renpy3.sh
+
+/renpy/renpy2.app
+/renpy/renpy3.app
+
+# Libraries.
+/renpy/lib
+
+# Platforms.
+/renpy/rapt
+/renpy/rapt2
+/renpy/rapt3
+
+/renpy/renios
+/renpy/renios2
+/renpy/renios3
+
+/renpy/web
+
+# Docs.
+/renpy/sphinx/source/inc
+/renpy/sphinx/source/thequestion.rst
+/renpy/doc
+/renpy/doc-web
+/renpy/LICENSE.txt
+
+# Gui template.
+/renpy/gui/game/gui
+
+# Editors.
+/renpy/jedit
+/renpy/atom
+
+# Generated source.
+/renpy/renpy/vc_version.py
+/renpy/module/gen/
+/renpy/module/gen3/
+/renpy/module/gen-static/
+/renpy/module/gen3-static/
+/renpy/tutorial/game/tutorial_director.rpy
+
+# Module build.
+/renpy/module/build
+/renpy/module/dist
+/renpy/module/emscripten-static
+
+# Download target.
+/renpy/dl
+
+# Pygame_sdl2.
+/renpy/pygame_sdl2
+
+# Steam.
+steam_appid.txt
+
+# Type analysis.
+/typings
+
+
+# Live2D
+cubism
+CubismSdkForNative-4-*.zip
+
+# Created files.
+/renpy/launcher/theme
+/renpy/screenshot*
+/renpy/android.json
+
+# Old files.
+/renpy/0old
+
+# Works in progress, throwaway scripts, etc.
+/renpy/scratch
+
+.blend1
