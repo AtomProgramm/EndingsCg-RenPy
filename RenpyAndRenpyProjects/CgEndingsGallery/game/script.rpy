@@ -64,7 +64,7 @@ label terapevtEnding:
     ChTerapevt "Попал."
     pause 0.2
     $ persistent.endingsCgOpen = True
-    $ persistent.endingsDict[0] = (persistent.endingsDict[0][0],persistent.endingsDict[0][1],True)
+    $ persistent.endingsDict[0]["Open"] = True
     show ending terapevtEndingImage with Fade(0.1, 0.0, 0.5, color="#fff")
     "Терапевт попал."
     "Концовка: Fast ending."
@@ -104,7 +104,7 @@ label psychoEnding:
     ChPsycho "Попал."
     pause 0.2
     $ persistent.endingsCgOpen = True
-    $ persistent.endingsDict[1] = (persistent.endingsDict[1][0],persistent.endingsDict[1][1],True)
+    $ persistent.endingsDict[1]["Open"] = True
     show ending psychoEndingImage with Fade(0.1, 0.0, 0.5, color="#fff")
     "Психолог попал."
     "Концовка: Psycho ending."
@@ -126,7 +126,7 @@ label trueWayHirurgOrder:
     pause 0.2
     ChHirurg "Эй, Патологоанатом. Глянь утка не утка."
     $ persistent.endingsCgOpen = True
-    $ persistent.endingsDict[2] = (persistent.endingsDict[2][0],persistent.endingsDict[2][1],True)
+    $ persistent.endingsDict[2]["Open"] = True
     show ending tueEndingImage with Fade(0.1, 0.0, 0.5, color="#fff")
     "Настоящий конец анекдота."
     "Концовка: True ending."
